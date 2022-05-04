@@ -14,4 +14,4 @@ The CssFrameWork which for own website
 ## What is Konohanasakuya
 
 KonohanaSakuya named from 'Konohanasakuya-hime' that one of the deities of Shintoism and she known as have a beautiful appearance.
-![Konohanasakuya](https://commons.wikimedia.org/wiki/File:Konohana_Sakuyahime.jpg#/media/File:Konohana_Sakuyahime.jpg)
+![Konohanasakuya](https://upload.wikimedia.org/wikipedia/commons/7/70/Konohana_Sakuyahime.jpg)
