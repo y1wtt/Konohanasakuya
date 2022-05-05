@@ -6,6 +6,7 @@
   "devDependencies": {},
   "scripts": {
     "sass" : "sass src/scss/main.scss:dist/css/kanohanasakuya.css --no-source-map --watch",
+    "compile-sass" : "sass src/scss/main.scss:dist/css/kanohanasakuya.css --no-source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
