@@ -1,0 +1,24 @@
+{
+  "name": "konohanasakuya",
+  "description": "The CssFrameWork which for own website",
+  "version": "0.1.0",
+  "main": "/src/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass" : "sass src/scss/main.scss:dist/css/kanohanasakuya.css --no-source-map --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/y1wtt/Konohanasakuya.git"
+  },
+  "author": "yuga iwata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/y1wtt/Konohanasakuya/issues"
+  },
+  "homepage": "https://github.com/y1wtt/Konohanasakuya#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}
