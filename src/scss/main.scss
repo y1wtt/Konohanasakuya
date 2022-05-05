@@ -1,32 +1,5 @@
-:root{
-  --text-size: 10px;
-  --text-size-xxl: 3.2rem;
-  --text-size-xl: 2.6rem;
-  --text-size-lg: 2.2rem;
-  --text-size-md: 1.8rem;
-  --text-size-sm: 1.4rem;
-  --text-size-xs: 1.2rem;
-  --color-primary: #a78bfa;
-  --color-secoundary: #c1abf8;
-  --color-success: #5fe15a;
-  --color-warning: #e7d06f;
-  --color-error: #e7615c;
-  --color-error-bg: #FFE0E0;
-  --color-text:#213b4a;
-  --color-text-invert: #ffffff;
-  --color-back-ground: #ffffff;
-  --color-grey-3C: #3C3C3C;
-  --color-grey-5F: #5F5F5F;
-  --color-grey-79: #797979;
-  --color-grey-91: #919191;
-  --color-grey-CA: #CACACA;
-  --color-grey-E1: #E1E1E1;
-  --color-grey-F3: #F3F3F3;
-  --color-shadow: rgba(0, 0, 0, 0.2);
-}
-
-@import "reset";
-@import "text/text";
-@import "form/form";
-@import "spacing/spacing";
-
+@use "constant";
+@use "reset";
+@use "spacing/spacing";
+@use "text/text";
+@use "form/form";
