@@ -4,7 +4,36 @@
 @import "h4";
 @import "h5";
 @import "h6";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
 
-body{
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Medium");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Yu Gothic";
+  src: local("Yu Gothic Bold");
+  font-weight: bold;
+}
+
+html {
   font-size: var(--text-size);
+  color: var(--color-text);
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ","Font Awesome 5 Pro","FontAwesome",sans-serif;
 }
