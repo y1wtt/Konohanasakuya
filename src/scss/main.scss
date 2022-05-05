@@ -1,18 +1,18 @@
 :root{
   --text-size: 10px;
-  --text-size-xxl: 2.6rem;
-  --text-size-xl: 2rem;
-  --text-size-lg: 1.6rem;
-  --text-size-md: 1.4rem;
-  --text-size-sm: 1.2rem;
-  --text-size-xs: 1.0rem;
-  --color-primary: #a47fcd;
-  --color-secoundary: #c7baf5;
+  --text-size-xxl: 3.2rem;
+  --text-size-xl: 2.6rem;
+  --text-size-lg: 2.2rem;
+  --text-size-md: 1.8rem;
+  --text-size-sm: 1.4rem;
+  --text-size-xs: 1.2rem;
+  --color-primary: #a78bfa;
+  --color-secoundary: #c1abf8;
   --color-success: #5fe15a;
   --color-warning: #e7d06f;
   --color-error: #e7615c;
   --color-error-bg: #FFE0E0;
-  --color-text: #202020;
+  --color-text:#213b4a;
   --color-text-invert: #ffffff;
   --color-back-ground: #ffffff;
   --color-grey-3C: #3C3C3C;
@@ -28,4 +28,5 @@
 @import "reset";
 @import "text/text";
 @import "form/form";
+@import "spacing/spacing";
 
