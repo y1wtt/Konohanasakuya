@@ -1,0 +1,118 @@
+@use '../util/break-point';
+@use '../util/media-query';
+
+$axes: ["a","x","y","t","b","l","r"];
+
+@mixin padding($axis:'a',$size:0){
+  @if($axis == 't'){
+    padding-top: $size;
+  }
+  @else if($axis == 'b'){
+    padding-bottom: $size;
+  }
+  @else if($axis == 'l'){
+    padding-left: $size;
+  }
+  @else if($axis == 'r'){
+    padding-right: $size;
+  }
+  @else if($axis == 'x'){
+    padding-left: $size;
+    padding-right: $size;
+  }
+  @else if($axis == 'y'){
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+  @else{
+    padding: $size;
+  }
+}
+
+@mixin paddingSet($axis){
+  @for $i from 0 through 16 {
+    @if($i == 0){
+      &#{$i} {
+        @include padding($axis, 0)
+      }
+    }
+    @else {
+      &#{$i} {
+        @include padding($axis, $i * 4px)
+      }
+    }
+  }
+}
+
+@mixin margin($axis:'a',$size:0){
+  @if($axis == 't'){
+    margin-top: $size;
+  }
+  @else if($axis == 'b'){
+    margin-bottom: $size;
+  }
+  @else if($axis == 'l'){
+    margin-left: $size;
+  }
+  @else if($axis == 'r'){
+    margin-right: $size;
+  }
+  @else if($axis == 'x'){
+    margin-left: $size;
+    margin-right: $size;
+  }
+  @else if($axis == 'y'){
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+  @else{
+    margin: $size;
+  }
+}
+
+@mixin marginSet($axis){
+  @for $i from 0 through 16 {
+    @if($i == 0){
+      &#{$i} {
+        @include margin($axis, 0)
+      }
+    }
+    @else {
+      &#{$i} {
+        @include margin($axis, $i * 4px)
+      }
+    }
+  }
+}
+
+
+
+.p{
+  @each $axis in $axes {
+    &#{$axis}- {
+      @include paddingSet($axis);
+      @each $key,$_ in break-point.$breakpoints{
+        &#{$key}-{
+          @include media-query.mq($key){
+            @include paddingSet($axis)
+          }
+        }
+      }
+    }
+  }
+}
+
+.m{
+  @each $axis in $axes {
+    &#{$axis}- {
+      @include paddingSet($axis);
+      @each $key, $_ in break-point.$breakpoints{
+        &#{$key}-{
+          @include media-query.mq($key){
+            @include marginSet($axis)
+          }
+        }
+      }
+    }
+  }
+}
