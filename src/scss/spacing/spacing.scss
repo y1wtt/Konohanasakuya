@@ -32,12 +32,12 @@ $axes: ["a","x","y","t","b","l","r"];
 @mixin paddingSet($axis){
   @for $i from 0 through 16 {
     @if($i == 0){
-      &#{$i} {
+      &-#{$i} {
         @include padding($axis, 0)
       }
     }
     @else {
-      &#{$i} {
+      &-#{$i} {
         @include padding($axis, $i * 4px)
       }
     }
@@ -73,12 +73,12 @@ $axes: ["a","x","y","t","b","l","r"];
 @mixin marginSet($axis){
   @for $i from 0 through 16 {
     @if($i == 0){
-      &#{$i} {
+      &-#{$i} {
         @include margin($axis, 0)
       }
     }
     @else {
-      &#{$i} {
+      &-#{$i} {
         @include margin($axis, $i * 4px)
       }
     }
@@ -89,10 +89,10 @@ $axes: ["a","x","y","t","b","l","r"];
 
 .p{
   @each $axis in $axes {
-    &#{$axis}- {
+    &#{$axis} {
       @include paddingSet($axis);
       @each $key,$_ in break-point.$breakpoints{
-        &#{$key}-{
+        &-#{$key}{
           @include media-query.mq($key){
             @include paddingSet($axis)
           }
@@ -104,10 +104,10 @@ $axes: ["a","x","y","t","b","l","r"];
 
 .m{
   @each $axis in $axes {
-    &#{$axis}- {
+    &#{$axis} {
       @include paddingSet($axis);
       @each $key, $_ in break-point.$breakpoints{
-        &#{$key}-{
+        &-#{$key}{
           @include media-query.mq($key){
             @include marginSet($axis)
           }

@@ -4,7 +4,7 @@
 
 @mixin basisSet(){
   @for $i from 1 through 12{
-    &#{$i}{
+    &-#{$i}{
       flex-basis: math.div($i,12) * 100%;
     }
   }
@@ -58,9 +58,9 @@
       justify-content: space-around;
     }
   }
-  .basis-{
+  .basis{
     @each $key,$_ in break-point.$breakpoints {
-      &#{$key}- {
+      &#-{$key} {
         @include media-query.mq($key) {
           @include basisSet()
         }
