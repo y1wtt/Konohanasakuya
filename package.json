@@ -2,9 +2,22 @@
   "name": "konohanasakuya",
   "description": "The CssFrameWork which for own website",
   "version": "0.1.0",
-  "main": "/src/index.js",
-  "devDependencies": {},
+  "main": "./dist/konohanasakuya.umd.js",
+  "module": "./dist/konohanasakuya.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/konohanasakuya.es.js",
+      "require": "./dist/konohanasakuya.umd.js"
+    }
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9"
+  },
   "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
     "sass" : "sass src/scss/main.scss:dist/css/konohanasakuya.css --no-source-map --watch",
     "compile-sass" : "sass src/scss/main.scss:dist/css/konohanasakuya.css --no-source-map",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,0 +1,33 @@
+.kh-text-field{
+  position: relative;
+  height: 40px;
+  line-height: 20px;
+  input{
+    width: auto;
+    line-height: 22px;
+    height: auto;
+    border: solid 1px var(--color-grey-3C);
+    outline: none;
+    font-size: unset;
+    transition: all ease .3s;
+    &:disabled {
+      transition: all ease .3s;
+    }
+    &:focus{
+      border: solid 1px var(--color-primary);
+      & ~ label{
+        transform: translateY(calc(-100% - 0.1rem)) scale(.85);
+      }
+    }
+  }
+  label {
+    position: absolute;
+    transform-origin: left;
+    transition: all .3s;
+    cursor: text;
+    z-index: 1;
+    margin: 0;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}

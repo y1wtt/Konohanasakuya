@@ -214,3 +214,20 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 
+# Logs
+pnpm-debug.log*
+
+node_modules
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
