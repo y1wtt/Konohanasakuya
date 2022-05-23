@@ -60,7 +60,7 @@
   }
   .basis{
     @each $key,$_ in break-point.$breakpoints {
-      &#-{$key} {
+      &-#{$key} {
         @include media-query.mq($key) {
           @include basisSet()
         }
