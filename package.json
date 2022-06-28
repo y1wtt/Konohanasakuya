@@ -28,8 +28,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "yarn lint && tsc && vite build",
     "preview": "vite preview",
+    "demo": "vite --config vite.config.dev.js build && yarn preview",
     "lint": "eslint --fix './src/**/*.{js,ts}' && prettier --write './src/**/*.{js,ts}' && stylelint --fix '**/*.{css,scss,sass}'",
     "sass": "sass src/scss/main.scss:dist/css/konohanasakuya.css --no-source-map --watch",
     "compile-sass": "sass src/scss/main.scss:dist/css/konohanasakuya.css --no-source-map",

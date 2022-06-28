@@ -24,6 +24,7 @@ module.exports = defineConfig({
     //       vue: 'Vue'
     //     }
       }
-    }
+    },
+    cssCodeSplit:true
   }
 })

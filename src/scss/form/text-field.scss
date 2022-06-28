@@ -35,8 +35,10 @@
     margin: 0;
     cursor: text;
     user-select: none;
-    transition: all .3s;
     transform-origin: left;
+    &.--transition{
+      transition: all .3s;
+    }
   }
 
   &.--active{
@@ -50,7 +52,7 @@
       display: block;
       padding:0 4px;
       background: var(--color-back-ground);
-      transform: translate(12px,calc(-100% - 0.1rem)) scale(.85);
+      transform: translate(8px,calc(-100% - 0.1rem)) scale(.85);
     }
   }
 }
