@@ -17,8 +17,8 @@ $axes: ["a","x","y","t","b","l","r"];
     padding-right: $size;
   }
   @else if($axis == 'x'){
-    padding-left: $size;
     padding-right: $size;
+    padding-left: $size;
   }
   @else if($axis == 'y'){
     padding-top: $size;
@@ -58,8 +58,8 @@ $axes: ["a","x","y","t","b","l","r"];
     margin-right: $size;
   }
   @else if($axis == 'x'){
-    margin-left: $size;
     margin-right: $size;
+    margin-left: $size;
   }
   @else if($axis == 'y'){
     margin-top: $size;
@@ -105,7 +105,7 @@ $axes: ["a","x","y","t","b","l","r"];
 .m{
   @each $axis in $axes {
     &#{$axis} {
-      @include paddingSet($axis);
+      @include marginSet($axis);
       @each $key, $_ in break-point.$breakpoints{
         &-#{$key}{
           @include media-query.mq($key){

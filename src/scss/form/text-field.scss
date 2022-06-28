@@ -2,32 +2,55 @@
   position: relative;
   height: 40px;
   line-height: 20px;
+
   input{
     width: auto;
-    line-height: 22px;
     height: auto;
-    border: solid 1px var(--color-grey-3C);
-    outline: none;
+    padding: 8px;
     font-size: unset;
+    line-height: 22px;
+    border: solid 1px var(--color-grey-3c);
+    border-radius: 5px;
+    outline: none;
     transition: all ease .3s;
+
     &:disabled {
       transition: all ease .3s;
     }
+
     &:focus{
       border: solid 1px var(--color-primary);
-      & ~ label{
-        transform: translateY(calc(-100% - 0.1rem)) scale(.85);
-      }
+    }
+
+    &::placeholder{
+      opacity: 0;
+      transition: opacity .3s;
     }
   }
+
   label {
     position: absolute;
-    transform-origin: left;
-    transition: all .3s;
-    cursor: text;
     z-index: 1;
+    padding-left: 4px;
     margin: 0;
-    -webkit-user-select: none;
+    cursor: text;
     user-select: none;
+    transition: all .3s;
+    transform-origin: left;
+  }
+
+  &.--active{
+    input{
+      &::placeholder{
+        opacity: .3;
+      }
+    }
+
+    label{
+      display: block;
+      padding:0 4px;
+      background: var(--color-back-ground);
+      transform: translate(12px,calc(-100% - 0.1rem)) scale(.85);
+    }
   }
 }
