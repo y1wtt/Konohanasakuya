@@ -11,6 +11,18 @@
     }
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.7.1",
+    "sass": "^1.51.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-recommended-scss": "^6.0.0",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-prettier": "^2.0.0",
     "typescript": "^4.5.4",
     "vite": "^2.9.9"
   },
@@ -18,8 +30,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "sass" : "sass src/scss/main.scss:dist/css/konohanasakuya.css --no-source-map --watch",
-    "compile-sass" : "sass src/scss/main.scss:dist/css/konohanasakuya.css --no-source-map",
+    "lint": "eslint --fix './src/**/*.{js,ts}' && prettier --write './src/**/*.{js,ts}' && stylelint --fix '**/*.{css,scss,sass}'",
+    "sass": "sass src/scss/main.scss:dist/css/konohanasakuya.css --no-source-map --watch",
+    "compile-sass": "sass src/scss/main.scss:dist/css/konohanasakuya.css --no-source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,7 +45,5 @@
     "url": "https://github.com/y1wtt/Konohanasakuya/issues"
   },
   "homepage": "https://github.com/y1wtt/Konohanasakuya#readme",
-  "dependencies": {
-    "sass": "^1.51.0"
-  }
+  "dependencies": {}
 }
