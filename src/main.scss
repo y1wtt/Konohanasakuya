@@ -3,4 +3,9 @@
 @use "scss/spacing/spacing";
 @use "scss/text/text";
 @use "scss/flex/flex";
-@use "scss/form/form";
+
+.kh--{
+  &full-height{
+    height: 100%;
+  }
+}
