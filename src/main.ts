@@ -1,3 +1,3 @@
 import './main.scss'
-import { textField } from './ts/event/textField'
-new textField()
+import { KhTextField } from './components/KhTextField/KhTextField'
+window.customElements.define('kh-text-field', KhTextField)
