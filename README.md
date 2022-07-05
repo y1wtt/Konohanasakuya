@@ -7,9 +7,7 @@ The CssFrameWork which for own website
 ## Feature
 
 - support
-      - Vue.js (2/3)
-          - React.js
-          - PureCssClasses
+    - React.js  
 
 ## What is Konohanasakuya
 
