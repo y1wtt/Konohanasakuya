@@ -3,7 +3,7 @@ import './kh-text-field.scss'
 export class KhTextField extends HTMLElement {
   constructor() {
     super()
-    this.classList.add('kh-text-field', 'd--flex', 'align--center')
+    this.classList.add('kh-text-field')
     const attrs = this.attributes
     const khInputBorder = this.setupInputBorderEl()
     const khInputSlot = this.setupInputSlotEl()
@@ -21,13 +21,13 @@ export class KhTextField extends HTMLElement {
 
   private setupInputBorderEl(): HTMLDivElement {
     const khInputBorder = document.createElement('div')
-    khInputBorder.classList.add('kh--input-border', 'kh--full-height')
+    khInputBorder.classList.add('kh--input-border')
     return khInputBorder
   }
 
   private setupInputSlotEl(): HTMLDivElement {
     const el = document.createElement('div')
-    el.classList.add('kh--input-slot', 'd--flex', 'align--center')
+    el.classList.add('kh--input-slot')
     return el
   }
 
